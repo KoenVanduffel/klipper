@@ -238,16 +238,16 @@ class DGUSPrinterMenu:
         self.version_min = (version[2] << 8) | version[3]
         self.version_pat = (version[4] << 8) | version[5]
 
-        if (self.version_maj < DPM_MIN_VERSION_MAJ
-            or (self.version_maj == DPM_MIN_VERSION_MAJ
-                and self.version_min < DPM_MIN_VERSION_MIN)
-            or (self.version_maj == DPM_MIN_VERSION_MAJ
-                and self.version_min == DPM_MIN_VERSION_MIN
-                and self.version_pat < DPM_MIN_VERSION_PAT)):
-            logging.warn("DPM: Firmware is outdated")
-            self.set_page("update", True)
-            self.t5uid1.send(lib.play_sound(3, build=True))
-            return
+        # if (self.version_maj < DPM_MIN_VERSION_MAJ
+            # or (self.version_maj == DPM_MIN_VERSION_MAJ
+                # and self.version_min < DPM_MIN_VERSION_MIN)
+            # or (self.version_maj == DPM_MIN_VERSION_MAJ
+                # and self.version_min == DPM_MIN_VERSION_MIN
+                # and self.version_pat < DPM_MIN_VERSION_PAT)):
+            # logging.warn("DPM: Firmware is outdated")
+            # self.set_page("update", True)
+            # self.t5uid1.send(lib.play_sound(3, build=True))
+            # return
 
         self.t5uid1.play_sound(1)
 
