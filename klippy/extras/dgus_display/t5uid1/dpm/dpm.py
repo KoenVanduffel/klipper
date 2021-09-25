@@ -8,7 +8,7 @@ from . import menu as m_menu
 from .. import lib, control as m_control, page as m_page
 
 GUI_MIN_VERSION = 0x30
-OS_MIN_VERSION = 0x21
+OS_MIN_VERSION = 0x10
 DPM_MIN_VERSION_MAJ = 1
 DPM_MIN_VERSION_MIN = 0
 DPM_MIN_VERSION_PAT = 0
