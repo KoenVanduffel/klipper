@@ -228,8 +228,8 @@ class DGUSPrinterMenu:
         if (self.gui_version < GUI_MIN_VERSION
             or self.os_version < OS_MIN_VERSION):
             logging.warn("DPM: Core firmware is outdated")
-            logging.warn('gui_version %s', self.gui_version)
-            logging.warn('OS_version: %s', self.os_version)
+            logging.warn(f'{self.gui_version} gui_version')
+            logging.warn(f'{self.os_version} OS_version:')
             self.set_page("core_update", True)
             self.t5uid1.send(lib.play_sound(3, build=True))
             return
